@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-app.get('/', function (req, res) {
+app.get('/insert', function (req, res) {
 
   fs.appendFile("temper.txt", JSON.stringify(req.query)+"\n", function(err) {
 
