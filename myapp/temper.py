@@ -32,8 +32,8 @@ def read_temp():
 while True:
 
  print(read_temp())
- content = urlopen("https://api.thingspeak.com/update?api_key=RTO8JQF1N2VA26FK&field1="+str(read_temp()))
- content1 = urlopen("http://10.42.0.51:3000/insert?value="+str(read_temp())) 
+ graph = urlopen("https://api.thingspeak.com/update?api_key=RTO8JQF1N2VA26FK&field1="+str(read_temp()))
+ server = urlopen("http://10.42.0.51:3000/insert?value="+str(read_temp())) 
  time.sleep(10)
 
 
