@@ -1,6 +1,8 @@
 
 #MISSION 4&5
 
+URL = https://www.youtube.com/watch?v=PxgOKalo3qw
+
 온도 읽어서 1)ThingSpeak한테 전송 
            2)내 서버한테 전송
 
