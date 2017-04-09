@@ -2,13 +2,14 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-mysql = require('mysql');
+var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'sensor',
     password: '0000',
     database: 'data'
 })
+
 connection.connect();
 
 var count = 1
@@ -22,13 +23,12 @@ r.value=10.25;
 var tempvalue = 0;
 
 
-
 app.get("/insert", function(req, res) {
   fs.appendFile("test.txt",JSON.stringify(req.query)+"\n", function(err) {
 
    count = count +1;
    r.seq = count;
-   r.value = parseFloat(req.query.tmp);  
+   r.value = parseFloat(req.query.value);  
    if(err) {
         return console.log(err);
 
